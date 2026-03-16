@@ -23,7 +23,6 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Single .container definition, using max width from "main container" */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -66,17 +65,26 @@
   align-items: center;
 }
 
-.nav-links a {
+.nav-link {
   text-decoration: none;
   color: black;
   font-size: 1.13rem;
   padding: 0.38rem 0.75rem;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  text-decoration: none;
-  /* Optionally, use a color or background to show hover/active instead of underline. */
+.nav-link.active {
+  color: var(--primary-color);
+  background: rgba(52, 152, 219, 0.13);
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.1);
+  transition:
+    background 0.18s,
+    color 0.18s,
+    box-shadow 0.18s;
+}
+
+.nav-link:hover:not(.active) {
   color: var(--primary-color);
   background: rgba(52, 152, 219, 0.08);
   border-radius: 6px;
@@ -120,7 +128,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: #272727;
-  padding: 110px 20px 100px 20px;
+  padding: 150px 20px 140px 20px;
   text-align: center;
   min-height: 60vh;
   display: flex;
@@ -149,14 +157,11 @@
   animation: fadeInUp 1s ease 0.2s both;
 }
 
+/* Button - See my work */
 .cta-button {
   display: inline-block;
   padding: 0.8em 2.2em;
-  background: linear-gradient(
-    90deg,
-    var(--primary-color) 65%,
-    var(--secondary-color) 100%
-  );
+  background: var(--primary-color);
   color: var(--white);
   text-decoration: none;
   border-radius: 30px;
@@ -168,24 +173,41 @@
     var(--transition),
     box-shadow 0.2s;
   animation: fadeInUp 1s ease 0.4s both;
-  box-shadow: 0 5px 16px rgba(52, 152, 219, 0.08);
+  box-shadow:
+    0 5px 24px 0 rgba(52, 152, 219, 0.15),
+    0 1.5px 7px 0 rgba(44, 62, 80, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.23) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  opacity: 0.42;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .cta-button:hover {
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 12px 28px rgba(52, 152, 219, 0.13);
-  background: linear-gradient(
-    90deg,
-    var(--primary-color) 50%,
-    var(--accent-color) 100%
-  );
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 16px 36px rgba(52, 152, 219, 0.18),
+    0 4px 18px 0 rgba(44, 62, 80, 0.04);
+  background: var(--secondary-color);
 }
 
 /* ==============
    Features Section
    ============== */
 .features {
-  padding: 82px 0;
+  padding: 150px 20px 140px 20px;
+
   background-color: var(--white);
 }
 
@@ -232,8 +254,8 @@
 }
 
 .card-img {
-  height: 110px;
-  width: 230px;
+  height: 150px;
+  width: 300px;
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
