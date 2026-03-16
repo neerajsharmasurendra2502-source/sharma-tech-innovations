@@ -1,66 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharma Tech Innovations</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="INDEX.HTML">
-                <img id="company-name" src="public/Brand_logo_1.png" alt="">
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Sharma Tech Innovations | Portfolio & Services</title>
+    <meta
+      name="description"
+      content="Showcasing work, skills, and achievements of Sharma Tech Innovations in web development, problem solving, and creative design."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="public/Brand_logo_1.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="logo">
+        <a
+          href="index.html"
+          aria-label="Sharma Tech Innovations Home"
+        >
+          <img
+            id="company-logo"
+            src="public/Brand_logo_1.png"
+            alt="Sharma Tech Innovations Logo"
+            width="60"
+            height="60"
+            loading="eager"
+          />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" class="active" aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button
+        class="burger"
+        aria-label="Open site navigation"
+        aria-controls="navigation-menu"
+        aria-expanded="false"
+      >
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+      </button>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Our Company</h1>
-            <p>A showcase of my work, skills, and achievements</p>
-            <a href="projects.html" class="cta-button">View My Work</a>
-        </div>
+    <header class="hero" role="banner">
+      <div class="hero-content">
+        <h1>Welcome to Sharma Tech Innovations</h1>
+        <p>
+          Empowering ideas through web technologies, creative design,
+          and robust problem solving.
+        </p>
+        <a
+          href="projects.html"
+          class="cta-button"
+          aria-label="View Projects"
+          >View My Work</a
+        >
+      </div>
     </header>
 
-    <section class="features">
+    <main>
+      <section class="features" aria-labelledby="what-i-do">
         <div class="container">
-            <h2>What I Do</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <img src="public/Web_Development.jpg" class="card-img" alt="">
-                    <h3>Web Development</h3>
-                    <p>Creating modern, responsive websites using HTML, CSS, and JavaScript</p>
-                </div>
-                <div class="feature-card">
-                    <img src="public/Problem_solving.webp" class="card-img" alt="">
-                    <h3>Problem Solving</h3>
-                    <p>Developing efficient solutions to complex technical problems</p>
-                </div>
-                <div class="feature-card">
-                    <img src="public/Creative_Writing.webp" class="card-img" alt="">
-                    <h3>Creative Design</h3>
-                    <p>Designing intuitive user interfaces and user experiences</p>
-                </div>
+          <h2 id="what-i-do">What I Do</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <img
+                src="public/Web_Development.jpg"
+                class="card-img"
+                alt="Laptop, smartphone, and code: Representing web development"
+                loading="lazy"
+                width="200"
+                height="150"
+              />
+              <h3>Web Development</h3>
+              <p>
+                Building modern, responsive websites using the latest
+                HTML, CSS, and JavaScript frameworks.
+              </p>
             </div>
+            <div class="feature-card">
+              <img
+                src="public/Problem_solving.webp"
+                class="card-img"
+                alt="Maze and light bulb: Representing problem-solving"
+                loading="lazy"
+                width="200"
+                height="150"
+              />
+              <h3>Problem Solving</h3>
+              <p>
+                Delivering efficient, innovative solutions to complex
+                technical challenges.
+              </p>
+            </div>
+            <div class="feature-card">
+              <img
+                src="public/Creative_Writing.webp"
+                class="card-img"
+                alt="Pencil and color palette: Representing creative design"
+                loading="lazy"
+                width="200"
+                height="150"
+              />
+              <h3>Creative Design</h3>
+              <p>
+                Crafting intuitive user interfaces and engaging user
+                experiences.
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Sharma Tech Innovations. All rights reserved.</p>
+    <footer class="footer" role="contentinfo">
+      <div class="footer-container">
+        <p>
+          &copy; 2026 Sharma Tech Innovations. All rights reserved.
+        </p>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
     </footer>
 
-    <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
