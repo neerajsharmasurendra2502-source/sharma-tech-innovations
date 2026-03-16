@@ -7,6 +7,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family:
+    "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Liberation Sans",
+    sans-serif;
 }
 
 :root {
@@ -20,14 +23,7 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.7;
-  color: var(--text-color);
-  background-color: var(--light-bg);
-  min-height: 100vh;
-}
-
+/* Single .container definition, using max width from "main container" */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -41,54 +37,52 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0 5%;
   background: var(--white);
-  height: 100px;
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  height: 84px;
+  min-height: 84px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+  border-bottom: 1px solid #eaeaea;
+  transition:
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  transition: transform 0.2s;
 }
 
-.logo:hover {
-  transform: scale(1.07);
-}
-
-#company-name {
-  height: 80px;
-  background-size: cover;
-  margin-top: 10px;
+#company-logo {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
   list-style: none;
   align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-  transition: var(--transition);
-  padding: 0.5rem 1.25rem;
-  border-radius: 4px;
-  letter-spacing: 0.02em;
-  position: relative;
+  color: black;
+  font-size: 1.13rem;
+  padding: 0.38rem 0.75rem;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
+  text-decoration: none;
+  /* Optionally, use a color or background to show hover/active instead of underline. */
   color: var(--primary-color);
   background: rgba(52, 152, 219, 0.08);
-  box-shadow: 0 2px 8px 0 rgba(52, 152, 219, 0.06);
+  border-radius: 6px;
+  transition:
+    background 0.18s,
+    color 0.18s;
 }
 
 /* ==============
@@ -191,7 +185,7 @@ body {
    Features Section
    ============== */
 .features {
-  padding: 82px 0 82px 0;
+  padding: 82px 0;
   background-color: var(--white);
 }
 
@@ -416,4 +410,115 @@ body {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Contact Box */
+.contact-box {
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  color: #555;
+}
+
+/* Form */
+.contact-form {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Button */
+.contact-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  background: #2c3e50;
+  color: white;
+}
+
+/* Sweet CSS CODE */
+/* Container */
+.projects-container {
+  width: 80%;
+  margin: auto;
+  padding: 40px;
+}
+
+/* Heading */
+.projects-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* Project Card */
+.project-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h2 {
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 14px;
+  margin: 4px 0;
 }
