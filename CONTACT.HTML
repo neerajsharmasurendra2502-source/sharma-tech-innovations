@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,42 +18,58 @@
     <!-- NavBar -->
     <div id="navbar-placeholder"></div>
 
-    <section class="contact-section">
+    <section class="page-section">
       <div class="container">
-        <h1>Get In Touch</h1>
+        <h1 class="page-title">Contact Me</h1>
         <div class="contact-content">
-          <div class="contact-info">
-            <h2>Contact Information</h2>
+          <div class="contact-details">
+            <h2>Let's Connect!</h2>
             <p>
-              Feel free to reach out for collaborations, questions, or
-              just to say hello!
+              I'm always excited to collaborate, answer your
+              questions, or simply connect with fellow enthusiasts.
+              Whether you have a project in mind, want to discuss
+              technology, or just want to say hi, I'd love to hear
+              from you.
             </p>
-
-            <div class="info-item">
-              <h3>Email</h3>
-              <p>Neerajsharma12@gmail.com</p>
-            </div>
-
-            <div class="info-item">
-              <h3>Phone</h3>
-              <p>+918299656977</p>
-            </div>
-
-            <div class="info-item">
-              <h3>Location</h3>
-              <p>Paniyara Maharajganj, Uttar Pradesh</p>
-            </div>
+            <ul class="contact-info-list">
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:Neerajsharma12@gmail.com"
+                  >Neerajsharma12@gmail.com</a
+                >
+              </li>
+              <li>
+                <strong>Phone:</strong>
+                <a href="tel:+918299656977">+91 8299 656 977</a>
+              </li>
+              <li>
+                <strong>Location:</strong>
+                Paniyara, Maharajganj, Uttar Pradesh, India
+              </li>
+            </ul>
           </div>
-
-          <form class="contact-form" id="contactForm">
+          <form id="contactForm" autocomplete="off">
+            <h2>Send a Message</h2>
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
             </div>
 
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
+              <label for="email">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
             </div>
 
             <div class="form-group">
@@ -62,6 +78,7 @@
                 type="text"
                 id="subject"
                 name="subject"
+                placeholder="Subject of your message"
                 required
               />
             </div>
@@ -72,19 +89,20 @@
                 id="message"
                 name="message"
                 rows="5"
+                placeholder="Type your message here..."
                 required
               ></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Submit</button>
+            <button type="submit" class="btn-primary">
+              Send Message
+            </button>
           </form>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <p>&copy; 2026 Sharma Tech Innovations. All rights reserved.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script src="scripts/main.js"></script>
   </body>
